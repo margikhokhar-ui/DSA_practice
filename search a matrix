@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int mat[3][3] = {
+        {5, 2, 9},
+        {1, 6, 3},
+        {8, 7, 4}
+    };
+
+    int target;
+    cin >> target;
+
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            if(mat[i][j] == target) {
+                cout << "Found at (" << i << "," << j << ")";
+                return 0;
+            }
+        }
+    }
+
+    cout << "Not Found";
+    return 0;
+}
